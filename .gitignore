@@ -1,0 +1,11 @@
+*.docx
+~$*.docx
+*.zip
+sandbox.log
+Frontend
+Backend
+Sandbox
+test_binaries/quick_exit
+test_binaries/sleeper
+test_binaries/cpu_hog
+test_binaries/memory_hog

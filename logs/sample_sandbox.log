@@ -1,0 +1,17 @@
+sandbox: child pid=41244 exec=./test_binaries/quick_exit time_limit=5 rss_limit_kb=32768
+monitor: pid=41244 rss_kb=940 elapsed=0.00
+sandbox: child exited code=0
+sandbox: killed_by_policy=no
+sandbox: child pid=41261 exec=./test_binaries/sleeper time_limit=2 rss_limit_kb=32768
+monitor: pid=41261 rss_kb=916 elapsed=0.00
+monitor: pid=41261 rss_kb=916 elapsed=0.20
+policy: sending signal 15 to pid=41261 reason=time limit exceeded
+sandbox: child terminated by signal=15
+sandbox: killed_by_policy=yes
+sandbox: child pid=41288 exec=./test_binaries/memory_hog time_limit=5 rss_limit_kb=12000
+monitor: pid=41288 rss_kb=3108 elapsed=0.20
+monitor: pid=41288 rss_kb=11296 elapsed=1.00
+monitor: pid=41288 rss_kb=13344 elapsed=1.20
+policy: sending signal 9 to pid=41288 reason=rss limit exceeded
+sandbox: child terminated by signal=9
+sandbox: killed_by_policy=yes
